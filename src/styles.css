@@ -1,7 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
-
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 body {
     padding: 2em 23em;
-    background:pink;
+    background: pink;
+}
+u{
+  color: green;
+}
+#submit{
+  border-radius: 250px;
+  font-size: 20px;
+}
+#inter{
+  border-radius: 250px;
+  height: 2cm;
+  width: 14cm;
+}
+p{
+  font-size: 34px;
+  font-family: fantasy;
+color: blue;
 }

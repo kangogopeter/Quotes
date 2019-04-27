@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row">
+        <form (ngSubmit)='submitGoal()' #quoteForm='ngForm'>
+            <div class="form-group">
+
+                <label for="name"> Your Name</label>
+                <input type="text"  class="form-control" id="name" [(ngModel1)]="newQuote.name" name="name" #name="ngModel" required>
+Display {{newQuote.name}}
+<div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+<p>Name Is A Must</p>
+            </div>
+          </div>
+            <div class="form-group">
+
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required></textarea>
+                <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+                   <p> Description tafadhali</p>
+
+            </div>
+            <div class="form-group">
+                <label for="complete">Completion</label>
+                <input type='time' id="complete" [(ngModel)]="newQoute.completeTime" name="completeTime" #completeTime="ngModel" required>
+                <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+                                    <p>You Forgot Time</p>
+            </div>
+             <button type="submit" class="btn btn-warning btn-lg">A Quote</button>
+        </form>
+    </div>
+</div>
+<p>
+  quote-form works!
+</p>

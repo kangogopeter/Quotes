@@ -1,16 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-<h1><i>QUOTES OF THE DAY</i></h1>
+<h1><u><i>QUOTES OF THE DAY</i></u></h1>
+<br>
+<br>
+<br>
+<br>
 <p>place your {{bill}} here:~</p>
 <br>
-<input name placeholder="any quote in your mind">
+<input id="inter" name placeholder="ANY QUOTE ON YOUR MIND">
+<br>
 <br>
 <br>
 <button id='submit' class="btn btn-warning">{{quote}}</button>
 <ul>
   <li *ngFor='let quote of quotes'>{{quote}}</li>
 </ul>
+</div>
+<app-quote></app-quote>
 <router-outlet></router-outlet>
