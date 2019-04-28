@@ -1,4 +1,5 @@
-import { Pipe, Time, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
+import { Time } from './app.component';
 @Pipe({
   name: 'timeCount'
 })
