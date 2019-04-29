@@ -1,5 +1,5 @@
 import { Component, OnInit, } from '@angular/core';
-import { Quote } from '../quote' ;
+import { Quote } from '../quote' 
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
@@ -15,29 +15,25 @@ export class QuoteComponent implements OnInit {
          new Quote(5, 'Steal The Steel', 'Javascript Almost Fucked Me', ),
          new Quote(6, 'Stalkers Are The Worst', 'I Hate You', ),
 
-     ];
+     ]
 
-     completeQuote( isComplete, index ) {
-       if (isComplete) {
-         this.quotes.splice(index, 1);
-       }
-     }
+     
 
      toogleDetails( index ) {
          this.quotes[index].showDescription = !this.quotes[index].showDescription;
+         this.quotes[index].showSubmit = !this.quotes[index].showSubmit;
      }
      deleteQuote( isComplete, index) {
        if ( isComplete ) {
-         const toDelete = confirm( 'do you want to delete ${this.quote[index].name}' );
+         let toDelete = confirm( 'do you want to delete ${this.quote[index].name}' );
 
-         if ( toDelete ) {
+         if ( toDelete = true ) {
      this.quotes.splice( index, 1 );
     }
        }
      }
      addNewQuote( quote ) {
-        const quoteLength = this.quotes.length;
-        quote.id = quoteLength + 1;
+        
         this.quotes.push(quote);
      }
   constructor() { }
