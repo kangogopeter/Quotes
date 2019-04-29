@@ -1,5 +1,5 @@
 import { Component, OnInit, } from '@angular/core';
-import { Quote } from '../quote' 
+import { Quote } from '../quote';
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
@@ -15,10 +15,7 @@ export class QuoteComponent implements OnInit {
          new Quote(5, 'Steal The Steel', 'Javascript Almost Fucked Me', ),
          new Quote(6, 'Stalkers Are The Worst', 'I Hate You', ),
 
-     ]
-
-     
-
+     ];
      toogleDetails( index ) {
          this.quotes[index].showDescription = !this.quotes[index].showDescription;
          this.quotes[index].showSubmit = !this.quotes[index].showSubmit;
@@ -26,7 +23,7 @@ export class QuoteComponent implements OnInit {
      deleteQuote( isComplete, index) {
        if ( isComplete ) {
          let toDelete = confirm( 'do you want to delete ${this.quote[index].name}' );
-
+// tslint:disable-next-line: no-conditional-assignment
          if ( toDelete = true ) {
      this.quotes.splice( index, 1 );
     }
