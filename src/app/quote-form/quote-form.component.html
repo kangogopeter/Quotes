@@ -4,11 +4,11 @@
             <div class="form-group">
 
                 <label for="name"> Your Quote</label>
-                <input type="text"  class="form-control" id="name" [(ngModel1)]="newQuote.name" name="name" #name="ngModel" required>
+                <input type="text"  class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
 Display {{newQuote.name}}
 <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
 <p>Name Is A Must</p>
-            
+            </div>
           </div>
             <div class="form-group">
 
@@ -19,10 +19,8 @@ Display {{newQuote.name}}
 
             </div>
             
-             <button type="submit" class="btn btn-warning btn-lg">A Quote</button>
+             <button type="submit" [(ngModel)]="newQuote.submit" class="btn btn-warning btn-lg">A Quote</button>
+          </div>
         </form>
     </div>
 </div>
-<p>
-  quote-form works!
-</p>
